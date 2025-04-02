@@ -1,0 +1,18 @@
+
+[
+    {
+        "institution": "UW Madison",
+        "gpa": "3.90",
+        "degree": "M.S. in Mechanical Engineering"
+    },
+    {
+        "institution": "Iowa State University",
+        "gpa": "3.47",
+        "degree": "B.S. in Mechanical Engineering"
+    },
+    {
+        "institution": "Madrid High School",
+        "gpa": "3.98",
+        "degree": "Valedictorian"
+    }
+]

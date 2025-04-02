@@ -1,0 +1,65 @@
+
+[
+    {
+        "position": "Graduate Research Assistant",
+        "company": "UW Madison",
+        "dates": "2024 Jan - Present",
+        "details": [
+            "Developed a highly integrated system-level model of third-generation concentrated solar power plants, enabling computationally efficient techno-economic analysis and system optimization through a physics-based approach grounded in thermodynamics and heat transfer.", 
+            "Identified a path to reduce the cost of energy for concentrated solar power by 20% through simulation, optimization, and parametric analysis, leveraging advanced computational techniques in C++ and Python.", 
+            "Extended and optimized a +1,000,000-line C++ codebase using Git for version control, CMake for build management, and Bash for automation, integrating new physics-based modeling capabilities and enhancing computational performance at scale." 
+        ]
+    },
+    {
+        "position": "Mechanical Design Engineer",
+        "company": "BAPI",
+        "dates": "2023 Jan - 2023 Dec",
+        "details": [
+            "Conceptualized, designed, and built an automated test fixture to accelerate product calibration by 800%, resulting in a theoretical fiscal gain of over $300,000 annually.",
+            "Spearheaded comprehensive thermodynamics and Computational Fluid Dynamics (CFD) analyses, resulting in data-driven design improvements and enhanced product reliability.",
+            "Utilized advanced 3D modeling software to meticulously engineer cutting-edge products, ensuring optimal performance and functionality across diverse operating environments.",
+            "Pioneered innovative evaluation methods for assessing thermal and mechanical benchmarks of new circuitry designs, facilitating quicker decision-making and more efficient product development cycles."
+        ]
+    },
+    {
+        "position": "Mechanical Test Engineer",
+        "company": "BAPI",
+        "dates": "2021 Aug - 2022 Dec",
+        "details": [
+            "Drove product excellence by translating test performance data into actionable recommendations, which in turn lead to innovative mechanical alterations that consistently surpassed industry standards.",
+            "Coordinated the identification and formulation of precise test metrics for new and existing products, ensuring rigorous evaluation of functionality and unwavering quality.",
+            "Meticulously planned, executed, and reported on comprehensive test procedures, providing vital insight for engineering and management teams."
+        ]
+    },
+    {
+        "position": "Product Design Engineer",
+        "company": "MARION",
+        "dates": "2020 Oct - 2021 Apr",
+        "details": [
+            "Directed the development of innovative manufacturing machinery by conducting in-depth customer requirement analyses to ensure designs aligned seamlessly with customer needs.",
+            "Proficiently constructed detailed Bills of Materials (BOMs) for fabrication and hardware acquisition, streamlining the production process and ensuring precise component selection for cost-effective and timely delivery.",
+            "Conducted thorough evaluations and cost analyses of system equipment and hardware, leading to strategic decisions that enhanced product quality and cost efficiency."
+        ]
+    },
+    {
+        "position": "Intern - Global Resources",
+        "company": "CRU",
+        "dates": "2019 Jun - 2020 Jul",
+        "details": [
+            "Successfully coached a team of seven, fostering professional development while strategically aligning their efforts to drive organizational goals and key performance metrics.",
+            "Managed multiple promotions, advertising campaigns, and strategic initiatives, contributing to over 1700 new company contacts and significantly expanding the organization's reach and impact.",
+            "Played a key role in fostering team leadership development, adaptability, and effective communication within the organization, contributing to a more cohesive and motivated team environment."
+        ]
+    },
+    {
+        "position": "Teaching Assistant",
+        "company": "ISU",
+        "dates": "2018 Jan - 2019 May",
+        "details": [
+            "Instructed a challenging 300-level material processing lab of 200+ students over three semesters, fostering a conducive learning environment and supporting students' academic growth.",
+            "Organized and skillfully directed 15 distinct labs encompassing essential topics in material science, material processing, and design considerations, ensuring comprehensive coverage of relevant concepts.",
+            "Conducted demonstrative lab experiments on various manufacturing processes to augment theoretical learning, enabling students to gain practical knowledge and valuable hands-on experience."
+        ]
+    }
+]
+

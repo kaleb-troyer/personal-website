@@ -1,0 +1,78 @@
+<!-- base.html -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}CV | Kaleb Troyer{% endblock %}</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+    {% block css %}{% endblock %}
+
+    <!-- Loading icon kit for github and linkedin -->
+    <script src="https://kit.fontawesome.com/eb8e385894.js" crossorigin="anonymous"></script>    
+</head>
+
+<!-- 
+styling options: 
+- body (effects all content)
+- header (only has nav list)
+- main
+- footer (only has nav list)
+
+other custom objects / flags: 
+- collapsible
+
+<main> content objects: 
+- .primary
+- .secondary
+-->
+<body> 
+    <header>
+        <nav>
+            <ul>
+                <li><a href="{{ url_for('home') }}">home</a></li>
+                <li><a href="{{ url_for('design') }}">design</a></li>
+                <li><a href="{{ url_for('about') }}">about</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Main content of webpage loaded here, see corresponding html file -->
+    <main>
+        {% block content %}
+        {% endblock %}
+    </main>
+
+    <footer>
+        <nav>
+            <ul>
+                <li><a href="https://www.linkedin.com/in/kaleb-troyer-78a6a5106/">
+                    <i class="fa-brands fa-linkedin"></i></a></li>
+                <li><a href="https://github.com/kaleb-troyer">
+                    <i class="fa-brands fa-square-github"></i></a></li>
+                <li><a>kaleb troyer 2025</a></li>
+            </ul>
+        </nav>
+    </footer>
+</body>
+
+<script>
+    // enables collapsible headers if given the class name 'collapsible'
+    const collapsibleHeaders = document.getElementsByClassName('collapsible');
+    for (let i = 0; i < collapsibleHeaders.length; i++) {
+        collapsibleHeaders[i].addEventListener('click', function() {
+            this.classList.toggle('open');
+            const content = this.nextElementSibling;
+            // content.classList.toggle('collapsed'); // use this OR the following: 
+            if (content.style.display === 'block') {
+                content.style.display = 'none';
+            } else {
+                content.style.display = 'block';
+            }
+        });
+    }
+</script>
+
+</html>
+

@@ -1,0 +1,11 @@
+{ 
+    "__note__": "In vscode, use alt+z for readable line length.", 
+
+    "home page": "Raised in central Iowa, now in eastern Wisconsin, I work for BAPI in the fields of mechanical design, product optimization, and research and development. At ISU (where I earned my bachelor's in Mechanical Engineering) I developed a love for the technical challenge. In the future, I hope to continue my work in r&d as I tackle some of the most thermomechanically challenging problems we face today.",
+
+    "interests": "While I like to stay updated on the latest trends in fusion and deep learning, I also find immense joy reading works crafted by authors like Tolkien and Frank Herbert. My leisure activities include gardening, backpacking, reading, kayaking, and chess. Curiosity is a fundamental belief that drives me, inspiring my interest in a wide array of subjects. Some of my ongoing personal projects include developing a deep learning model for audio processing, collaborating on a musical album with a friend, and engaging in autodidactic exploration of the world around me. Although I yearn for more time to indulge in woodworking, metalworking, linguistics, and fitness, I remain most eager to expand my knowledge and skills.",
+    
+    "ethos": "I intend to do work that matters. By this, I do not mean that some work is beneath me, for I truly believe that no job is beneath me. I also do not mean to seek the most valuable work, such as that of a medical doctor, for it is also true that not all jobs are for me. In part, I mean that I intend to strive with tenacity, to give up my work for the sacrifice it is and pray that it betters others. I aim to live smarter, so the malicious around us might not find footing to exploit or misuse us. To this extent, I aim to practice deliberately and embrace discomfort for the growth it brings. And, above all, I aim to honor that which I've been given.",
+    
+    "intro": "This website was developed entirely from scratch, solely by myself, using a python backend and a flask web framework. Though I was originally spurred to learn python by the release of ChatGPT4.0, I've found in this new skill an endless degree of utility in my career and personal life. This website is just one of those nodes on that journey. Below, you can find an exploration of my interests and ethos. Thanks for visiting."
+}  

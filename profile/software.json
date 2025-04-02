@@ -1,0 +1,8 @@
+
+[
+    { "name": "SOLIDWORKS",  "education": 6,  "hours": 2000 },
+    { "name": "EXCEL",       "education": 1,  "hours": 1600 },
+    { "name": "PYTHON",      "education": 3,  "hours": 300  },
+    { "name": "BASH",        "education": 1,  "hours": 50   },
+    { "name": "SQL",         "education": 1,  "hours": 50   }
+]

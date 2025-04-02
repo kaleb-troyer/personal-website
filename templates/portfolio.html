@@ -1,0 +1,17 @@
+<!-- portfolio.html -->
+{% extends 'base.html' %}
+
+{% block content %}
+
+{% block css %}
+<link rel="stylesheet" href="{{ url_for('static', filename='css/portfolio.css') }}">
+{% endblock %}
+
+<section class="primary">
+    <h2>design work</h2>
+    <p> 
+        Due to the nature of my work, many of the projects for which I am most proud are not for me to show off. In lieu of these projects, I will populate this portfolio with projects that I can display, personal or otherwise. Please come back later to check on my portfolio!
+    </p>
+</section>
+
+{% endblock %}

@@ -1,0 +1,110 @@
+<!-- home.html -->
+{% extends 'base.html' %}
+
+{% block content %}
+
+{% block css %}
+<link rel="stylesheet" href="{{ url_for('static', filename='css/home.css') }}">
+{% endblock %}
+
+<section class="primary">
+    <article id="profile">
+        <figure>
+            <img src="{{ url_for('static', filename='profile.png') }}" alt="Profile Picture">
+        </figure>
+        <div>
+            <h4>Kaleb Troyer</h4>
+            <h4>Thermal / Mechanical / Computational Engineering</h4>
+            <ul>
+                <li><a href="https://www.linkedin.com/in/kaleb-troyer-78a6a5106/">
+                    <i class="fa-brands fa-linkedin"></i></a></li>
+                <li><a href="https://github.com/kaleb-troyer">
+                    <i class="fa-brands fa-square-github"></i></a></li>
+            </ul>
+        </div>
+    </article>
+    <h2>Introduction</h2>
+    <p>{{ introduction }}</p>
+</section>
+
+<section class="secondary">
+
+    <article class="navigator">
+        <nav>
+            <ul>
+                <li><a href="{{ url_for('home') }}">impact</a></li>
+                <li><a href="{{ url_for('design') }}">skills</a></li>
+                <li><a href="{{ url_for('about') }}">experience</a></li>
+            </ul>
+        </nav>
+    </article>
+
+    <article id="education">
+        <h2>Education</h2>
+        <div class="education-list">
+            {% for edu in education %}
+            <div class="education-item">
+                <span>{{ edu.institution }}</span>
+                <span>{{ edu.gpa }}</span>
+                <span>{{ edu.degree }}</span>
+            </div>
+            {% endfor %}
+        </div>
+    </article>
+    
+    <article id="experience">
+        <h2>Experience</h2>
+        {% for work in work_history %}
+        <article>
+            <div class="experience-list">
+                <div class="experience-item">
+                    <span class="heading">{{ work.position }}</span>
+                    <span class="heading">{{ work.dates }}</span>
+                    <span class="heading">{{ work.company }}</span>
+                </div>
+            </div>
+            <ul>
+                {% for detail in work.details %}
+                <li>{{ detail }}</li>
+                {% endfor %}
+            </ul>
+        </article>
+        {% endfor %}
+    </article>
+    
+    <article id="skills">
+        <h2>Skills</h2>
+        <div class="skill-list">
+            <div class="skill-item">
+                <span class="heading">skill / software</span>
+                <span class="heading">education</span>
+                <span class="heading">hours</span>
+                <span></span>
+                <span></span>
+            </div>
+            {% for skill in skills %}
+            <div class="skill-item">
+                <span>{{ skill.name }}</span>
+                <span class="xp-bar" style="width: {{ skill.education }}%"></span>
+                <span>{{ skill.hours }}</span>
+                <span class="xp-bar" style="width: {{ skill.experience }}%"></span>
+                <span></span>
+            </div>
+            {% endfor %}
+                        
+            {% for program in software %}
+            <div class="skill-item">
+                <span>{{ program.name }}</span>
+                <span class="xp-bar" style="width: {{ program.education }}%"></span>
+                <span>{{ program.hours }}</span>
+                <span class="xp-bar" style="width: {{ program.experience }}%"></span>
+                <span></span>
+            </div>
+            {% endfor %}
+        </div>
+    </article>
+
+</section>
+
+{% endblock %}
+

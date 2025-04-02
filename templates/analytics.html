@@ -1,0 +1,28 @@
+<!-- portfolio.html -->
+{% extends 'base.html' %}
+
+{% block content %}
+
+{% block css %}
+<link rel="stylesheet" href="{{ url_for('static', filename='css/analytics.css') }}">
+{% endblock %}
+
+<section id="analysis">
+    <ul>
+    {% for key, value in analysis.items() %}
+        <li>{{ key }}: {{ value }}</li>
+    {% endfor %}
+        <li></li>
+        <li>Visitors:</li>
+    {% for row in lastXVisitors %}
+        <li>{{ row }}</li>
+    {% endfor %}
+        <li></li>
+        <li>Page Visits:</li>
+    {% for row in lastXVisits %}
+        <li>{{ row }}</li>
+    {% endfor %}
+    </ul>
+</section>
+
+{% endblock %}

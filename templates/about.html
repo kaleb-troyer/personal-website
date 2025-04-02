@@ -1,0 +1,42 @@
+<!-- about.html -->
+{% extends 'base.html' %}
+
+{% block content %}
+
+{% block css %}
+<link rel="stylesheet" href="{{ url_for('static', filename='css/about.css') }}">
+{% endblock %}
+
+<section class="primary">
+    <p>{{ intro }}</p>
+</section>
+
+<section class="secondary">
+
+    <article class="navigator">
+        <nav>
+            <ul>
+                <li><a href="{{ url_for('home') }}">interests</a></li>
+                <li><a href="{{ url_for('design') }}">likes</a></li>
+                <li><a href="{{ url_for('about') }}">uses</a></li>
+            </ul>
+        </nav>
+    </article>
+
+    <article id="interests">
+        <h2>Interests</h2>
+        <p>{{ interests }}</p>
+    </article>
+
+    <article id="ethos">
+        <h2>Ethos</h2>
+        <p>{{ ethos }}</p>
+    </article>
+    
+    <!-- <div class="footer-picture">
+        <img src="{{ url_for('static', filename='footer.png') }}" alt="Footer Picture">
+    </div> -->
+</section>
+
+
+{% endblock %}

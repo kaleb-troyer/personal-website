@@ -1,0 +1,152 @@
+
+/* project variables */
+:root {
+    --fill-color-main:  #BFBFBF; 
+    --fill-color-dark:  #3B3B3B; 
+    --accent-color:     #a98d63; 
+}
+
+/* ------------------------------ */
+/* Grid-based Page Layout ------- */
+/* ------------------------------ */
+
+/* Explanation: 
+Grid used to layout the body of the webpage. 
+auto 1fr auto = Header -> Main fills the space -> Footer. 
+*/
+
+html, body {
+    display: grid;
+    grid-template-rows: auto 1fr auto;
+    grid-template-columns: 100%;
+    min-height: 10vh;
+    background-color: var(--fill-color-dark); 
+}
+
+/* ------------------------------ */
+/* Flexbox Header & Footer ------ */
+/* ------------------------------ */ 
+
+header, footer {
+    display: flex;
+    justify-content: center; 
+    align-items: center;
+    padding: 1rem;
+}
+
+header li:not(:last-child)::after, 
+footer li:not(:last-child)::after {
+    content: " / ";
+    margin-left: 0.5rem;
+    margin-right: 0.5rem;
+    font-weight: bold;
+    display: inline-block; 
+}
+
+header ul, footer ul {
+    display: flex;
+    align-items: center; 
+}
+
+header nav ul, 
+footer nav ul {
+    display: flex;
+    list-style: none;
+    color: var(--fill-color-main); 
+    padding: 0;
+    margin: 0;
+}
+
+header nav a,
+footer nav a {
+    text-decoration: none;
+    color: var(--fill-color-main); 
+    font-size: large;
+}
+
+/* ------------------------------ */
+/* Secondary Navigator ---------- */
+/* ------------------------------ */ 
+
+.navigator {
+    display: flex;
+    padding-bottom: 0.5rem; 
+    border-bottom: 2px solid var(--fill-color-dark); 
+    width: 100%; 
+}
+
+.navigator li:not(:last-child)::after {
+    content: " / ";
+    margin-left: 0.5rem;
+    margin-right: 0.5rem;
+    font-weight: bold;
+    display: inline-block; 
+}
+
+.navigator nav ul {
+    display: flex;
+    list-style: none;
+    color: var(--fill-color-dark); 
+    padding: 0;
+    margin: 0;
+}
+
+.navigator nav a {
+    text-decoration: none;
+    color: var(--fill-color-dark); 
+    font-size: large;
+}
+
+/* ------------------------------ */
+/* Main Content Grid ------------ */
+/* ------------------------------ */ 
+
+h2 {
+    position: relative;
+    padding-bottom: 0.5rem; 
+    border-bottom: 2px solid var(--fill-color-dark); 
+    width: 100%; 
+}
+
+main {
+    display: grid;
+    grid-template-columns: 1fr min(70%, 100%) 1fr; 
+    width: 100%; 
+    max-width: none; 
+    box-sizing: border-box; 
+}
+
+main > * {
+    grid-column: 2; 
+    word-wrap: break-word;
+}
+
+.primary, .secondary {
+    padding: 1rem;
+    max-width: none; 
+    background-color: var(--fill-color-main);
+    border-radius: 10px;
+    color: var(--fill-color-dark);
+}
+
+.primary {
+    margin-bottom: 1rem; 
+}
+
+/* ------------------------------ */
+/* Mobile Formatting ------------ */
+/* ------------------------------ */ 
+
+/* Responsive */
+@media (max-width: 700px) {
+    main {
+        grid-template-columns: 1fr; /* Make grid a single column on small screens */
+        padding: 1rem; /* Reduced padding for smaller screens */
+    }
+
+    main > * {
+        grid-column: 1; /* Ensure the content spans the entire width */
+    }
+}
+
+

@@ -1,0 +1,15 @@
+
+[
+    { "name": "research & development",  "education": 2,  "hours": 1600 },
+    { "name": "FEA and simulations",     "education": 8,  "hours": 600  },
+    { "name": "technical writing",       "education": 4,  "hours": 1200 },
+    { "name": "product design",          "education": 6,  "hours": 1800 },
+    { "name": "design / sheet metal",    "education": 4,  "hours": 600  },
+    { "name": "design / fabrication",    "education": 4,  "hours": 1000 },
+    { "name": "design / plastics",       "education": 2,  "hours": 200  },
+    { "name": "thermodynamics",          "education": 8,  "hours": 200  },
+    { "name": "heat transfer",           "education": 6,  "hours": 200  },
+    { "name": "fluid dynamics",          "education": 6,  "hours": 100  },
+    { "name": "circuitry",               "education": 4,  "hours": 200  },
+    { "name": "resource planning",       "education": 1,  "hours": 400  }
+]

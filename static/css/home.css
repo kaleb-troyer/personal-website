@@ -1,0 +1,83 @@
+
+/* ------------------------------ */
+/* Profile / Intro Style -------- */
+/* ------------------------------ */ 
+
+#profile {
+    display: grid;
+    grid-template-columns: auto 1fr; 
+    grid-template-rows: auto auto; 
+    gap: 1rem;
+    align-items: center;
+}
+
+#profile figure, #profile ul {
+    margin: 0;
+    padding: 0;
+}
+
+#profile img {
+    display: block;
+    min-width: 50px;  
+    max-width: 200px; 
+    width: 100%;      
+    height: auto;
+}
+
+#profile ul {
+    display: flex;
+    list-style: none;
+    gap: 0.5rem; 
+}
+
+#profile a {
+    text-decoration: none;
+    color: var(--fill-color-dark); 
+    font-size: large;
+}
+
+/* ------------------------------ */
+/* Resume Item Grid Format ------ */
+/* ------------------------------ */ 
+
+.education-list, .skill-list, .experience-list {
+    display: grid;
+    width: 100%;
+    gap: 0 1rem;
+    align-items: top; 
+}
+
+.education-item, .skill-item, .experience-item {
+    display: contents; 
+}
+
+.skill-list {
+    align-items: center;
+}
+
+.education-list {
+    grid-template-columns: auto auto 1fr;
+}
+
+.experience-list {
+    grid-template-columns: 35% 25% 1fr;
+}
+
+.skill-list {
+    grid-template-columns: auto auto auto 1fr 10%;
+}
+
+/* ------------------------------ */
+/* Grid Item Styles ------------- */
+/* ------------------------------ */ 
+
+.heading {
+    font-weight: bold;
+}
+
+.xp-bar {
+    height: 0.6rem;
+    background-color: var(--accent-color);
+}
+
+
