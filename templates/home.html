@@ -32,20 +32,20 @@
     <article class="navigator">
         <nav>
             <ul>
-                <li><a href="#" data-page="impact">impact</a></li>
-                <li><a href="#" data-page="skills">skills</a></li>
-                <li><a href="#" data-page="experience">experience</a></li>
+                <li><a href="/home/impact" data-page="impact">impact</a></li>
+                <li><a href="/home/skills" data-page="skills">skills</a></li>
+                <li><a href="/home/experience" data-page="experience">experience</a></li>
             </ul>
         </nav>
     </article>
 
     <section id="dynamic-content">
         {% if subpage == "experience" %}
-            {% include "experience.html" %}
+            {% include "_experience.html" %}
         {% elif subpage == "skills" %}
-            {% include "skills.html" %}
-        {% elif subpage == "impact" %}
-            {% include "impact.html" %}
+            {% include "_skills.html" %}
+        {% else %}
+            {% include "_impact.html" %}
         {% endif %}
     </section>
 

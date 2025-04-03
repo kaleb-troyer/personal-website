@@ -50,11 +50,26 @@ def home(page=None):
 
 @app.route("/home/<page>")
 def home_subpages(page):
+
     if page not in ["impact", "skills", "experience"]:
         return "Page not found", 404
 
+    skills = getinfo.getSkills()
+    software = getinfo.getSoftware()
+    education = getinfo.getEducation()
+    experience = getinfo.getExperience()
+    introduction = getinfo.getAbout()["home page"]
+
     if request.headers.get("X-Requested-With") == "XMLHttpRequest":
-        return render_template(f"{page}.html")
+        return render_template(
+            f"_{page}.html", 
+            introduction=introduction,
+            skills=skills,
+            software=software,
+            education=education,
+            work_history=experience,
+            subpage=page, 
+        )
 
     return home(page=page)
 
