@@ -10,7 +10,7 @@
 <section class="primary">
     <article id="profile">
         <figure>
-            <img src="{{ url_for('static', filename='profile.png') }}" alt="Profile Picture">
+            <img src="{{ url_for('static', filename='profileB.png') }}" alt="Profile Picture">
         </figure>
         <div>
             <h4>Kaleb Troyer</h4>
@@ -32,12 +32,22 @@
     <article class="navigator">
         <nav>
             <ul>
-                <li><a href="{{ url_for('home') }}">impact</a></li>
-                <li><a href="{{ url_for('design') }}">skills</a></li>
-                <li><a href="{{ url_for('about') }}">experience</a></li>
+                <li><a href="#" data-page="impact">impact</a></li>
+                <li><a href="#" data-page="skills">skills</a></li>
+                <li><a href="#" data-page="experience">experience</a></li>
             </ul>
         </nav>
     </article>
+
+    <section id="dynamic-content">
+        {% if subpage == "experience" %}
+            {% include "experience.html" %}
+        {% elif subpage == "skills" %}
+            {% include "skills.html" %}
+        {% elif subpage == "impact" %}
+            {% include "impact.html" %}
+        {% endif %}
+    </section>
 
     <article id="education">
         <h2>Education</h2>

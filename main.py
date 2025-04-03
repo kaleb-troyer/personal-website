@@ -1,7 +1,7 @@
 
 from werkzeug.middleware.proxy_fix import ProxyFix
+from flask import Flask, render_template, request
 from model import PageVisit, Visitors, logUser
-from flask import Flask, render_template
 from flask_sqlalchemy import SQLAlchemy
 
 import getinfo
@@ -26,26 +26,37 @@ with app.app_context():
 # website page routines
 @app.route('/', methods=['GET'])
 @app.route('/home', methods=['GET'])
-def home(): 
+def home(page=None):
 
-    user = logUser(db, 'home')
-    if not user: 
-        return render_template('404.html'), 404
+    user = logUser(db, "home")
+    if not user:
+        return render_template("404.html"), 404
 
     skills = getinfo.getSkills()
     software = getinfo.getSoftware()
     education = getinfo.getEducation()
     experience = getinfo.getExperience()
-    introduction = getinfo.getAbout()['home page']
+    introduction = getinfo.getAbout()["home page"]
 
     return render_template(
-        'home.html', 
-        introduction=introduction, 
-        skills=skills, 
-        software=software, 
-        education=education, 
-        work_history=experience
+        "home.html",
+        introduction=introduction,
+        skills=skills,
+        software=software,
+        education=education,
+        work_history=experience,
+        subpage=page, 
     )
+
+@app.route("/home/<page>")
+def home_subpages(page):
+    if page not in ["impact", "skills", "experience"]:
+        return "Page not found", 404
+
+    if request.headers.get("X-Requested-With") == "XMLHttpRequest":
+        return render_template(f"{page}.html")
+
+    return home(page=page)
 
 @app.route('/design', methods=['GET'])
 def design(): 

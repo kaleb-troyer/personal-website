@@ -58,20 +58,43 @@ other custom objects / flags:
 </body>
 
 <script>
-    // enables collapsible headers if given the class name 'collapsible'
-    const collapsibleHeaders = document.getElementsByClassName('collapsible');
-    for (let i = 0; i < collapsibleHeaders.length; i++) {
-        collapsibleHeaders[i].addEventListener('click', function() {
-            this.classList.toggle('open');
-            const content = this.nextElementSibling;
-            // content.classList.toggle('collapsed'); // use this OR the following: 
-            if (content.style.display === 'block') {
-                content.style.display = 'none';
-            } else {
-                content.style.display = 'block';
+    // for dynamically loading subpage html
+    document.addEventListener("DOMContentLoaded", function () {
+        const links = document.querySelectorAll(".navigator a");
+        const content = document.getElementById("dynamic-content");
+
+        links.forEach(link => {
+            link.addEventListener("click", function (event) {
+                event.preventDefault();
+
+                let page = this.getAttribute("data-page");
+                let root = window.location.pathname.startsWith("/about") ? "/about" : "/home";
+
+                if (!page || page === "null") {
+                    window.location.href = root;
+                    return;
+                }
+
+                fetch(`${root}/${page}`, { headers: { "X-Requested-With": "XMLHttpRequest" } })
+                    .then(response => response.text())
+                    .then(html => {
+                        content.innerHTML = html;
+                        history.pushState({ page }, "", `${root}/${page}`);
+                    })
+                    .catch(error => console.error("Error loading page:", error));
+            });
+        });
+
+        window.addEventListener("popstate", function (event) {
+            if (event.state && event.state.page) {
+                fetch(`/home/${event.state.page}`, { headers: { "X-Requested-With": "XMLHttpRequest" } })
+                    .then(response => response.text())
+                    .then(html => {
+                        content.innerHTML = html;
+                    });
             }
         });
-    }
+    });
 </script>
 
 </html>

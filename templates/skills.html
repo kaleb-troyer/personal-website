@@ -1,0 +1,32 @@
+
+<article id="skills">
+    <h2>Skills</h2>
+    <div class="skill-list">
+        <div class="skill-item">
+            <span class="heading">skill / software</span>
+            <span class="heading">education</span>
+            <span class="heading">hours</span>
+            <span></span>
+            <span></span>
+        </div>
+        {% for skill in skills %}
+        <div class="skill-item">
+            <span>{{ skill.name }}</span>
+            <span class="xp-bar" style="width: {{ skill.education }}%"></span>
+            <span>{{ skill.hours }}</span>
+            <span class="xp-bar" style="width: {{ skill.experience }}%"></span>
+            <span></span>
+        </div>
+        {% endfor %}
+                    
+        {% for program in software %}
+        <div class="skill-item">
+            <span>{{ program.name }}</span>
+            <span class="xp-bar" style="width: {{ program.education }}%"></span>
+            <span>{{ program.hours }}</span>
+            <span class="xp-bar" style="width: {{ program.experience }}%"></span>
+            <span></span>
+        </div>
+        {% endfor %}
+    </div>
+</article>
