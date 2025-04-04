@@ -51,7 +51,7 @@ def home(page=None):
 @app.route("/home/<page>")
 def home_subpages(page):
 
-    if page not in ["impact", "skills", "experience"]:
+    if page not in ["impact", "skills", "experience", "education"]:
         return "Page not found", 404
 
     skills = getinfo.getSkills()

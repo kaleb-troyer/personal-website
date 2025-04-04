@@ -1,2 +1,20 @@
 
-<p>experience stuff</p>
+<article id="experience">
+    <!-- <h2>Experience</h2> -->
+    {% for work in work_history %}
+    <article>
+        <div class="experience-list">
+            <div class="experience-item">
+                <span class="heading">{{ work.position }}</span>
+                <span class="heading">{{ work.dates }}</span>
+                <span class="heading">{{ work.company }}</span>
+            </div>
+        </div>
+        <ul>
+            {% for detail in work.details %}
+            <li>{{ detail }}</li>
+            {% endfor %}
+        </ul>
+    </article>
+    {% endfor %}
+</article>
