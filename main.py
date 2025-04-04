@@ -48,31 +48,6 @@ def home(page=None):
         subpage=page, 
     )
 
-@app.route("/home/<page>")
-def home_subpages(page):
-
-    if page not in ["impact", "skills", "experience", "education"]:
-        return "Page not found", 404
-
-    skills = getinfo.getSkills()
-    software = getinfo.getSoftware()
-    education = getinfo.getEducation()
-    experience = getinfo.getExperience()
-    introduction = getinfo.getAbout()["home page"]
-
-    if request.headers.get("X-Requested-With") == "XMLHttpRequest":
-        return render_template(
-            f"_{page}.html", 
-            introduction=introduction,
-            skills=skills,
-            software=software,
-            education=education,
-            work_history=experience,
-            subpage=page, 
-        )
-
-    return home(page=page)
-
 @app.route('/design', methods=['GET'])
 def design(): 
 
@@ -88,7 +63,7 @@ def design():
     )
 
 @app.route('/about', methods=['GET'])
-def about(): 
+def about(page=None): 
 
     user = logUser(db, 'about')
     if not user: 
@@ -103,7 +78,8 @@ def about():
         'about.html', 
         interests=interests, 
         ethos=ethos, 
-        intro=intro
+        intro=intro, 
+        subpage=page
     )
 
 @app.route('/analytics', methods=['GET'])
@@ -131,7 +107,56 @@ def analytics():
         lastXVisitors=lastXVisitors
     )
 
+@app.route("/home/<page>")
+def subpages_home(page):
+
+    if page not in ["impact", "skills", "experience", "education"]:
+        return "Page not found", 404
+
+    skills = getinfo.getSkills()
+    software = getinfo.getSoftware()
+    education = getinfo.getEducation()
+    experience = getinfo.getExperience()
+    introduction = getinfo.getAbout()["home page"]
+
+    if request.headers.get("X-Requested-With") == "XMLHttpRequest":
+        return render_template(
+            f"subpages/_{page}.html", 
+            introduction=introduction,
+            skills=skills,
+            software=software,
+            education=education,
+            work_history=experience,
+            subpage=page, 
+        )
+
+    return home(page=page)
+
+@app.route("/about/<page>")
+def subpages_about(page):
+
+    if page not in ["interests", "likes", "uses"]:
+        return "Page not found", 404
+
+    about = getinfo.getAbout()
+    ethos = about['ethos']
+    intro = about['intro']
+    interests = about['interests']
+
+    if request.headers.get("X-Requested-With") == "XMLHttpRequest":
+        return render_template(
+            f"subpages/_{page}.html", 
+            interests=interests, 
+            ethos=ethos, 
+            intro=intro, 
+            subpage=page
+        )
+
+    return about(page=page)
+
 
 if __name__=='__main__': 
     app.run(host="0.0.0.0", debug=True)
+
+
 

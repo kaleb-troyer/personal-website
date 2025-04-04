@@ -10,7 +10,9 @@
     {% block css %}{% endblock %}
 
     <!-- Loading icon kit for github and linkedin -->
-    <script src="https://kit.fontawesome.com/eb8e385894.js" crossorigin="anonymous"></script>    
+    <script src="https://kit.fontawesome.com/eb8e385894.js" crossorigin="anonymous"></script> 
+    <script src="/static/javascript/emailconversion.js" defer></script>
+    <script src="/static/javascript/navigator.js" defer></script>
 </head>
 
 <!-- 
@@ -28,9 +30,9 @@ styling options:
     <header>
         <nav>
             <ul>
-                <li><a href="{{ url_for('home') }}">home</a></li>
-                <li><a href="{{ url_for('design') }}">design</a></li>
-                <li><a href="{{ url_for('about') }}">about</a></li>
+                <li><a class="hover" href="{{ url_for('home') }}">home</a></li>
+                <li><a class="hover" href="{{ url_for('design') }}">design</a></li>
+                <li><a class="hover" href="{{ url_for('about') }}">about</a></li>
             </ul>
         </nav>
     </header>
@@ -44,9 +46,9 @@ styling options:
     <footer>
         <nav>
             <ul>
-                <li><a href="https://www.linkedin.com/in/kaleb-troyer-78a6a5106/">
+                <li><a class="hover" href="https://www.linkedin.com/in/kaleb-troyer-78a6a5106/">
                     <i class="fa-brands fa-linkedin"></i></a></li>
-                <li><a href="https://github.com/kaleb-troyer">
+                <li><a class="hover" href="https://github.com/kaleb-troyer">
                     <i class="fa-brands fa-square-github"></i></a></li>
                 <li><a>kaleb troyer 2025</a></li>
             </ul>
@@ -54,7 +56,7 @@ styling options:
     </footer>
 </body>
 
-<script>
+<!-- <script>
     // for dynamically loading subpage html
     document.addEventListener("DOMContentLoaded", function () {
         const links = document.querySelectorAll(".navigator a");
@@ -92,7 +94,7 @@ styling options:
             }
         });
     });
-</script>
+</script> -->
 
 </html>
 

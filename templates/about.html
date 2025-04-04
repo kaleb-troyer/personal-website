@@ -9,6 +9,9 @@
 
 <section class="primary">
     <p>{{ intro }}</p>
+    <a id="link-conversion" rel="nofollow, noindex" href="please dont scrape me">
+        <span class="email" id="text-conversion">dont scrape me</span>
+    </a>
 </section>
 
 <section class="secondary">
@@ -16,27 +19,26 @@
     <article class="navigator">
         <nav>
             <ul>
-                <li><a href="{{ url_for('home') }}">interests</a></li>
-                <li><a href="{{ url_for('design') }}">likes</a></li>
-                <li><a href="{{ url_for('about') }}">uses</a></li>
+                <li><a class="hover" href="/about/interests" data-page="interests">interests</a></li>
+                <li><a class="hover" href="/about/likes" data-page="likes">likes</a></li>
+                <li><a class="hover" href="/about/uses" data-page="uses">uses</a></li>
             </ul>
         </nav>
     </article>
 
-    <article id="interests">
-        <h2>Interests</h2>
-        <p>{{ interests }}</p>
-    </article>
-
-    <article id="ethos">
-        <h2>Ethos</h2>
-        <p>{{ ethos }}</p>
-    </article>
+    <section id="dynamic-content">
+        {% if subpage == "uses" %}
+            {% include "subpages/_uses.html" %}
+        {% elif subpage == "likes" %}
+            {% include "subpages/_likes.html" %}
+        {% else %}
+            {% include "subpages/_interests.html" %}
+        {% endif %}
+    </section>
     
-    <!-- <div class="footer-picture">
-        <img src="{{ url_for('static', filename='footer.png') }}" alt="Footer Picture">
-    </div> -->
+    <div class="footer-img">
+        <img src="{{ url_for('static', filename='footer.png') }}" alt="Photo of a narrow valley flanked by steep hills in Denali National Park (2022)">
+    </div>
 </section>
-
 
 {% endblock %}

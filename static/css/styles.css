@@ -33,6 +33,10 @@ h1, h2, h3, h4, h5 {
     font-family: var(--font-heading);
 }
 
+.hover:hover {
+    color: var(--accent-color) !important; 
+}
+
 /* ------------------------------ */
 /* Flexbox Header & Footer ------ */
 /* ------------------------------ */ 
@@ -95,6 +99,7 @@ footer nav a {
 
 .navigator nav ul {
     display: flex;
+    flex-wrap: wrap; 
     list-style: none;
     color: var(--font-color-main); 
     padding: 0;
@@ -135,12 +140,29 @@ main > * {
     padding: 1rem;
     max-width: none; 
     background-color: var(--fill-color-main);
-    /* border-radius: 10px; */
     color: var(--font-color-main);
 }
 
 .primary {
     margin-bottom: 1rem; 
+}
+
+.footer-img img {
+    display: block;
+    width: 100%;      
+    height: auto;
+}
+
+.email {
+    text-decoration: underline;
+    text-decoration-color: var(--font-color-main);
+    color: var(--font-color-main); 
+}
+
+.email:hover {
+    text-decoration: underline;
+    text-decoration-color: var(--accent-color);
+    color: var(--accent-color); 
 }
 
 /* ------------------------------ */

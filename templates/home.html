@@ -16,9 +16,9 @@
             <h4>Kaleb Troyer</h4>
             <h4>Thermal / Mechanical / Computational Engineering</h4>
             <ul>
-                <li><a href="https://www.linkedin.com/in/kaleb-troyer-78a6a5106/">
+                <li><a class="hover" href="https://www.linkedin.com/in/kaleb-troyer-78a6a5106/">
                     <i class="fa-brands fa-linkedin"></i></a></li>
-                <li><a href="https://github.com/kaleb-troyer">
+                <li><a class="hover" href="https://github.com/kaleb-troyer">
                     <i class="fa-brands fa-square-github"></i></a></li>
             </ul>
         </div>
@@ -32,23 +32,23 @@
     <article class="navigator">
         <nav>
             <ul>
-                <li><a href="/home/impact" data-page="impact">impact</a></li>
-                <li><a href="/home/skills" data-page="skills">skills</a></li>
-                <li><a href="/home/experience" data-page="experience">experience</a></li>
-                <li><a href="/home/education" data-page="education">education</a></li>
+                <li><a class="hover" href="/home/impact" data-page="impact">impact</a></li>
+                <li><a class="hover" href="/home/skills" data-page="skills">skills</a></li>
+                <li><a class="hover" href="/home/experience" data-page="experience">experience</a></li>
+                <li><a class="hover" href="/home/education" data-page="education">education</a></li>
             </ul>
         </nav>
     </article>
 
     <section id="dynamic-content">
         {% if subpage == "experience" %}
-            {% include "_experience.html" %}
+            {% include "subpages/_experience.html" %}
         {% elif subpage == "skills" %}
-            {% include "_skills.html" %}
+            {% include "subpages/_skills.html" %}
         {% elif subpage == "education" %}
-            {% include "_education.html" %}
+            {% include "subpages/_education.html" %}
         {% else %}
-            {% include "_impact.html" %}
+            {% include "subpages/_impact.html" %}
         {% endif %}
     </section>
 
