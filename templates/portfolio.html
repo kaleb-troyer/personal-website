@@ -10,8 +10,27 @@
 <section class="primary">
     <h2>design work</h2>
     <p> 
-        Due to the nature of my work, many of the projects for which I am most proud are not for me to show off. In lieu of these projects, I will populate this portfolio with projects that I can display, personal or otherwise. Please come back later to check on my portfolio!
+        {{ introduction }}
     </p>
+</section>
+
+<section class="secondary">
+
+    {% for item in portfolioItems %}
+    <article id="portfolio-item">
+        <figure>
+            <img src="{{ url_for('static', filename='portfolio/' + item.figure) }}" alt="{{ item.name }}">
+        </figure>
+        <h3>{{ item.name }}</h3>
+        <p>{{ item.description }}</p>
+        {% if item.link != "" %}
+        <p>
+            Visit the project, <a href="{{ item.link }}" target="_blank" rel="noopener noreferrer">here</a>.
+        </p>
+        {% endif %}
+    </article>
+    {% endfor %}
+
 </section>
 
 {% endblock %}

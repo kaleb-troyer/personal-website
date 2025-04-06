@@ -1,9 +1,9 @@
 
-// for dynamically loading subpage html
 document.addEventListener("DOMContentLoaded", function () {
     const links = document.querySelectorAll(".navigator a");
     const content = document.getElementById("dynamic-content");
 
+    updateActiveLinks();
     links.forEach(link => {
         link.addEventListener("click", function (event) {
             event.preventDefault();
@@ -21,8 +21,11 @@ document.addEventListener("DOMContentLoaded", function () {
                 .then(html => {
                     content.innerHTML = html;
                     history.pushState({ page }, "", `${root}/${page}`);
-                })
-                .catch(error => console.error("Error loading page:", error));
+
+                    updateActiveLinks(); 
+                }
+            )
+            .catch(error => console.error("Error loading page:", error));
         });
     });
 
@@ -32,7 +35,11 @@ document.addEventListener("DOMContentLoaded", function () {
                 .then(response => response.text())
                 .then(html => {
                     content.innerHTML = html;
-                });
+
+                    updateActiveLinks(); 
+                }
+            );
         }
     });
 });
+

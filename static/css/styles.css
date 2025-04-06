@@ -37,6 +37,10 @@ h1, h2, h3, h4, h5 {
     color: var(--accent-color) !important; 
 }
 
+.active {
+    color: var(--accent-color) !important;
+}
+
 /* ------------------------------ */
 /* Flexbox Header & Footer ------ */
 /* ------------------------------ */ 
@@ -79,7 +83,7 @@ footer nav a {
 }
 
 /* ------------------------------ */
-/* Secondary Navigator ---------- */
+/* Subpage Navigator ------------ */
 /* ------------------------------ */ 
 
 .navigator {
@@ -116,7 +120,7 @@ footer nav a {
 /* Main Content Grid ------------ */
 /* ------------------------------ */ 
 
-h2 {
+h2, h3 {
     position: relative;
     padding-bottom: 0.5rem; 
     border-bottom: var(--border-width) solid var(--font-color-main); 
@@ -153,6 +157,10 @@ main > * {
     height: auto;
 }
 
+/* ------------------------------ */
+/* Email Handling --------------- */
+/* ------------------------------ */ 
+
 .email {
     text-decoration: underline;
     text-decoration-color: var(--font-color-main);
@@ -169,15 +177,14 @@ main > * {
 /* Mobile Formatting ------------ */
 /* ------------------------------ */ 
 
-/* Responsive */
 @media (max-width: 700px) {
     main {
-        grid-template-columns: 1fr; /* Make grid a single column on small screens */
-        padding: 1rem; /* Reduced padding for smaller screens */
+        grid-template-columns: 1fr; 
+        padding: 1rem; 
     }
 
     main > * {
-        grid-column: 1; /* Ensure the content spans the entire width */
+        grid-column: 1; 
     }
 }
 

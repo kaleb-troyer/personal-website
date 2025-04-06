@@ -1,3 +1,33 @@
+
 [
-    "NA"
+    {
+        "name": "HTC Pyflow", 
+        "figure": "htc-pyflow.png",  
+        "description": "5", 
+        "link": "https://www.google.com"
+    }, 
+    {
+        "name": "SAM extension", 
+        "figure": "SAM-mod.png",  
+        "description": "4", 
+        "link": ""
+    }, 
+    {
+        "name": "SAMplot", 
+        "figure": "SAMplot.png",  
+        "description": "3", 
+        "link": ""
+    }, 
+    {
+        "name": "ATE Temperature Probe Calibration", 
+        "figure": "2023-07-06_temp test fixture.png",  
+        "description": "2", 
+        "link": ""
+    }, 
+    {
+        "name": "2-Piece Electronics Enclosure", 
+        "figure": "2023-07-06_gateway.png",  
+        "description": "1", 
+        "link": ""
+    } 
 ]

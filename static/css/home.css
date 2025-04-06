@@ -37,6 +37,14 @@
     font-family: var(--font-heading);
 }
 
+#profile h4 {
+    margin: 1rem 0 1rem;
+}
+
+#profile a {
+    margin: 0 0.1rem 0; 
+}
+
 /* ------------------------------ */
 /* Resume Item Grid Format ------ */
 /* ------------------------------ */ 
@@ -46,6 +54,7 @@
     width: 100%;
     gap: 0 1rem;
     align-items: top; 
+    margin: 1rem 0 0;
 }
 
 .education-item, .skill-item, .experience-item {
@@ -61,7 +70,7 @@
 }
 
 .experience-list {
-    grid-template-columns: 35% 25% 1fr;
+    grid-template-columns: minmax(120px, 250px) minmax(80px, 200px) 1fr;
 }
 
 .skill-list {
@@ -71,6 +80,12 @@
 /* ------------------------------ */
 /* Grid Item Styles ------------- */
 /* ------------------------------ */ 
+
+.grid-spacer {
+    margin-top: 1rem; 
+    height: 100%;
+    display: block;
+}
 
 .heading {
     font-weight: bold;

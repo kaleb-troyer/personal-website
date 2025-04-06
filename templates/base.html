@@ -5,27 +5,17 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>{% block title %}CV | Kaleb Troyer{% endblock %}</title>
+    <title>{% block title %}Hire Kaleb Troyer{% endblock %}</title>
     <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
     {% block css %}{% endblock %}
 
     <!-- Loading icon kit for github and linkedin -->
     <script src="https://kit.fontawesome.com/eb8e385894.js" crossorigin="anonymous"></script> 
-    <script src="/static/javascript/emailconversion.js" defer></script>
+    <script src="/static/javascript/email-conversion.js" defer></script>
+    <script src="/static/javascript/active-page.js" defer></script>
     <script src="/static/javascript/navigator.js" defer></script>
 </head>
 
-<!-- 
-styling options: 
-- body (effects all content)
-- header (only has nav list)
-- <main>
-- footer (only has nav list)
-
-<main> content objects: 
-- .primary
-- .secondary 
--->
 <body> 
     <header>
         <nav>
@@ -55,46 +45,6 @@ styling options:
         </nav>
     </footer>
 </body>
-
-<!-- <script>
-    // for dynamically loading subpage html
-    document.addEventListener("DOMContentLoaded", function () {
-        const links = document.querySelectorAll(".navigator a");
-        const content = document.getElementById("dynamic-content");
-
-        links.forEach(link => {
-            link.addEventListener("click", function (event) {
-                event.preventDefault();
-
-                let page = this.getAttribute("data-page");
-                let root = window.location.pathname.startsWith("/about") ? "/about" : "/home";
-
-                if (!page || page === "null") {
-                    window.location.href = root;
-                    return;
-                }
-
-                fetch(`${root}/${page}`, { headers: { "X-Requested-With": "XMLHttpRequest" } })
-                    .then(response => response.text())
-                    .then(html => {
-                        content.innerHTML = html;
-                        history.pushState({ page }, "", `${root}/${page}`);
-                    })
-                    .catch(error => console.error("Error loading page:", error));
-            });
-        });
-
-        window.addEventListener("popstate", function (event) {
-            if (event.state && event.state.page) {
-                fetch(`/home/${event.state.page}`, { headers: { "X-Requested-With": "XMLHttpRequest" } })
-                    .then(response => response.text())
-                    .then(html => {
-                        content.innerHTML = html;
-                    });
-            }
-        });
-    });
-</script> -->
 
 </html>
 

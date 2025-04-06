@@ -2,14 +2,6 @@
 import json
 import os
 
-# def _ed_bar(value, max, length=10): 
-#     strbar = round(length * value / max)
-#     return "▰" * int(strbar)
-
-# def _xp_bar(value, max, length=24): 
-#     strbar = round(length * value / max)
-#     return f"{value:0>{len(str(max))}}\t{"▰" * (int(strbar))}"
-
 def _ed_bar(value, max): 
     return 100 * (value / max)
 
@@ -30,9 +22,11 @@ def getSkills():
     
     skills = _getter('skills')
     software = _getter('software')
+    languages = _getter('languages')
 
-    maxed = max([entry['education'] for entry in skills] + [entry['education'] for entry in software])
-    maxxp = max([entry['hours'] for entry in skills] + [entry['hours'] for entry in software])
+    categories = [skills, software, languages]
+    maxed = max(entry['education'] for field in categories for entry in field)
+    maxxp = max(entry['hours'] for field in categories for entry in field)
     for entry in skills: 
         entry['education'] = _ed_bar(entry['education'], maxed)
         entry['experience'] = _xp_bar(entry['hours'], maxxp)
@@ -43,14 +37,31 @@ def getSoftware():
 
     skills = _getter('skills')
     software = _getter('software')
+    languages = _getter('languages')
 
-    maxed = max([entry['education'] for entry in skills] + [entry['education'] for entry in software])
-    maxxp = max([entry['hours'] for entry in skills] + [entry['hours'] for entry in software])
+    categories = [skills, software, languages]
+    maxed = max(entry['education'] for field in categories for entry in field)
+    maxxp = max(entry['hours'] for field in categories for entry in field)
     for entry in software: 
         entry['education'] = _ed_bar(entry['education'], maxed)
         entry['experience'] = _xp_bar(entry['hours'], maxxp)
 
     return software
+
+def getLanguages(): 
+
+    skills = _getter('skills')
+    software = _getter('software')
+    languages = _getter('languages')
+
+    categories = [skills, software, languages]
+    maxed = max(entry['education'] for field in categories for entry in field)
+    maxxp = max(entry['hours'] for field in categories for entry in field)
+    for entry in languages: 
+        entry['education'] = _ed_bar(entry['education'], maxed)
+        entry['experience'] = _xp_bar(entry['hours'], maxxp)
+
+    return languages
 
 def getEducation(): 
     return _getter('education')

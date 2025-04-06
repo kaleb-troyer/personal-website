@@ -2,7 +2,30 @@
 <article id="skills">
     <div class="skill-list">
         <div class="skill-item">
-            <span class="heading">skill / software</span>
+            <span class="heading">languages</span>
+            <span class="heading">education</span>
+            <span class="heading">hours</span>
+            <span></span>
+            <span></span>
+        </div>
+        {% for lang in languages %}
+        <div class="skill-item">
+            <span>{{ lang.name }}</span>
+            <span class="xp-bar" style="width: {{ lang.education }}%"></span>
+            <span>{{ lang.hours }}</span>
+            <span class="xp-bar" style="width: {{ lang.experience }}%"></span>
+            <span></span>
+        </div>
+        {% endfor %}
+
+        <div class="grid-spacer"></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+
+        <div class="skill-item">
+            <span class="heading">core competencies</span>
             <span class="heading">education</span>
             <span class="heading">hours</span>
             <span></span>
@@ -17,7 +40,20 @@
             <span></span>
         </div>
         {% endfor %}
-                    
+
+        <div class="grid-spacer"></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+
+        <div class="skill-item">
+            <span class="heading">software</span>
+            <span class="heading">education</span>
+            <span class="heading">hours</span>
+            <span></span>
+            <span></span>
+        </div>
         {% for program in software %}
         <div class="skill-item">
             <span>{{ program.name }}</span>

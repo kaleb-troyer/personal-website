@@ -1,0 +1,8 @@
+
+[
+    { "name": "Python",      "education": 3,  "hours": 2300 },
+    { "name": "Julia",       "education": 1,  "hours": 100  },
+    { "name": "Bash",        "education": 1,  "hours": 130  },
+    { "name": "SQL",         "education": 1,  "hours": 50   }, 
+    { "name": "C++",         "education": 1,  "hours": 500  }
+]

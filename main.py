@@ -7,6 +7,17 @@ from flask_sqlalchemy import SQLAlchemy
 import getinfo
 import os
 
+'''
+Tasks
+- hours
+- impact
+- design intro
+- project descriptions 
+- project links
+- likes
+- uses
+'''
+
 # instantiating database
 db = SQLAlchemy()
 
@@ -34,6 +45,7 @@ def home(page=None):
 
     skills = getinfo.getSkills()
     software = getinfo.getSoftware()
+    languages = getinfo.getLanguages()
     education = getinfo.getEducation()
     experience = getinfo.getExperience()
     introduction = getinfo.getAbout()["home page"]
@@ -43,6 +55,7 @@ def home(page=None):
         introduction=introduction,
         skills=skills,
         software=software,
+        languages=languages, 
         education=education,
         work_history=experience,
         subpage=page, 
@@ -56,9 +69,11 @@ def design():
         return render_template('404.html'), 404
 
     portfolio = getinfo.getPortfolio()
+    introduction = getinfo.getAbout()["design note"]
 
     return render_template(
         'portfolio.html', 
+        introduction=introduction, 
         portfolioItems=portfolio
     )
 
@@ -115,6 +130,7 @@ def subpages_home(page):
 
     skills = getinfo.getSkills()
     software = getinfo.getSoftware()
+    languages = getinfo.getLanguages()
     education = getinfo.getEducation()
     experience = getinfo.getExperience()
     introduction = getinfo.getAbout()["home page"]
@@ -125,6 +141,7 @@ def subpages_home(page):
             introduction=introduction,
             skills=skills,
             software=software,
+            languages=languages, 
             education=education,
             work_history=experience,
             subpage=page, 

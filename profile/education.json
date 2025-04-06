@@ -3,16 +3,19 @@
     {
         "institution": "UW Madison",
         "gpa": "3.90",
-        "degree": "M.S. in Mechanical Engineering"
+        "degree": "M.S. in Mechanical Engineering", 
+        "year": "2024 - 2025"
     },
     {
         "institution": "Iowa State University",
         "gpa": "3.47",
-        "degree": "B.S. in Mechanical Engineering"
+        "degree": "B.S. in Mechanical Engineering", 
+        "year": "2015 - 2019"
     },
     {
         "institution": "Madrid High School",
         "gpa": "3.98",
-        "degree": "Valedictorian"
+        "degree": "Valedictorian", 
+        "year": "2011 - 2015"
     }
 ]

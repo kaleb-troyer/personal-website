@@ -2,9 +2,15 @@
 <article id="education">
     <!-- <h2>Education</h2> -->
     <div class="education-list">
+        <div class="education-item">
+            <span class="heading">Institution</span>
+            <span class="heading">GPA</span>
+            <span class="heading">Degree</span>
+        </div>
         {% for edu in education %}
         <div class="education-item">
             <span>{{ edu.institution }}</span>
+            <!-- <span>{{ edu.year }}</span> -->
             <span>{{ edu.gpa }}</span>
             <span>{{ edu.degree }}</span>
         </div>

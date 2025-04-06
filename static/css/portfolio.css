@@ -1,0 +1,78 @@
+
+
+/* ------------------------------ */
+/* Portfolio Layout ------------- */
+/* ------------------------------ */ 
+
+.secondary {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1rem;
+    padding: 1rem;
+}
+
+.secondary a {
+    text-decoration: underline;
+    text-decoration-color: var(--font-color-main);
+    color: var(--font-color-main); 
+}
+
+/* ------------------------------ */
+/* Mobile Formatting ------------ */
+/* ------------------------------ */ 
+
+#portfolio-item figure {
+    margin: 0 auto; 
+    padding: 0;
+    display: block;
+    width: fit-content; 
+}
+
+#portfolio-item img {
+    display: block;
+    min-width: 50px;  
+    max-width: 200px; 
+    width: 100%;      
+    height: auto;
+    border-radius: 8px;
+}
+
+#portfolio-item {
+    background-color: #1A1917;
+    border-color: #1A1917;
+    border-radius: 12px;
+    box-shadow: 0 2px 20px rgba(0, 0, 0, 0.1);
+    padding: 1rem;
+    text-align: center;
+}
+
+#portfolio-item h3 {
+    font-size: 1.0rem;
+    margin-bottom: 0.5rem;
+    text-align: left;
+}
+
+#portfolio-item p {
+    margin-top: 0.75rem;
+    font-size: 0.95rem;
+    text-align: left;
+}
+
+/* ------------------------------ */
+/* Mobile Formatting ------------ */
+/* ------------------------------ */ 
+
+@media (max-width: 900px) {
+    .secondary {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 600px) {
+    .secondary {
+        grid-template-columns: 1fr;
+    }
+}
+
+
+
