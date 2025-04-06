@@ -1,4 +1,8 @@
 
+:root {
+    --temp: #313A3F;
+    --main: #1A1917;  
+}
 
 /* ------------------------------ */
 /* Portfolio Layout ------------- */
@@ -6,7 +10,7 @@
 
 .secondary {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(2, 1fr);
     gap: 1rem;
     padding: 1rem;
 }
@@ -38,8 +42,8 @@
 }
 
 #portfolio-item {
-    background-color: #1A1917;
-    border-color: #1A1917;
+    background-color: var(--temp);
+    border-color: var(--temp);
     border-radius: 12px;
     box-shadow: 0 2px 20px rgba(0, 0, 0, 0.1);
     padding: 1rem;

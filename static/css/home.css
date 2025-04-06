@@ -77,6 +77,10 @@
     grid-template-columns: auto auto auto 1fr 10%;
 }
 
+.hours {
+    text-align: right;
+}
+
 /* ------------------------------ */
 /* Grid Item Styles ------------- */
 /* ------------------------------ */ 

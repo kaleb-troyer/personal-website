@@ -12,7 +12,7 @@
         <div class="skill-item">
             <span>{{ lang.name }}</span>
             <span class="xp-bar" style="width: {{ lang.education }}%"></span>
-            <span>{{ lang.hours }}</span>
+            <span class="hours">{{ lang.hours }}</span>
             <span class="xp-bar" style="width: {{ lang.experience }}%"></span>
             <span></span>
         </div>
@@ -35,7 +35,7 @@
         <div class="skill-item">
             <span>{{ skill.name }}</span>
             <span class="xp-bar" style="width: {{ skill.education }}%"></span>
-            <span>{{ skill.hours }}</span>
+            <span class="hours">{{ skill.hours }}</span>
             <span class="xp-bar" style="width: {{ skill.experience }}%"></span>
             <span></span>
         </div>
@@ -58,10 +58,10 @@
         <div class="skill-item">
             <span>{{ program.name }}</span>
             <span class="xp-bar" style="width: {{ program.education }}%"></span>
-            <span>{{ program.hours }}</span>
+            <span class="hours">{{ program.hours }}</span>
             <span class="xp-bar" style="width: {{ program.experience }}%"></span>
             <span></span>
-        </div>
+        </div> 
         {% endfor %}
     </div>
 </article>

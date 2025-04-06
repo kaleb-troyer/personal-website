@@ -7,17 +7,6 @@ from flask_sqlalchemy import SQLAlchemy
 import getinfo
 import os
 
-'''
-Tasks
-- hours
-- impact
-- design intro
-- project descriptions 
-- project links
-- likes
-- uses
-'''
-
 # instantiating database
 db = SQLAlchemy()
 

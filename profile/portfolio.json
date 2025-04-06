@@ -3,31 +3,25 @@
     {
         "name": "HTC Pyflow", 
         "figure": "htc-pyflow.png",  
-        "description": "5", 
-        "link": "https://www.google.com"
+        "description": "A python package for calculating the heat transfer coefficient of a user-specified fluid moving through a variety of geometries. Fluid calculations are performed in C++ and called by the python wrapper.", 
+        "link": "https://github.com/kaleb-troyer/Pyflow"
     }, 
     {
         "name": "SAM extension", 
         "figure": "SAM-mod.png",  
-        "description": "4", 
-        "link": ""
+        "description": "A fork of the NREL System Advisor Model. Created for research regarding the implementation of topology optimized particle-to-sCO2 SiC heat exchangers in concentrated solar power applications.", 
+        "link": "https://github.com/kaleb-troyer/system-advisor-model"
     }, 
     {
         "name": "SAMplot", 
         "figure": "SAMplot.png",  
-        "description": "3", 
+        "description": "A data parsing and plot utils package for interfacing with SAM simulation products. Optimized to easily handle millions of data entries for dynamic data filtering, selection, and analysis.", 
         "link": ""
     }, 
     {
         "name": "ATE Temperature Probe Calibration", 
         "figure": "2023-07-06_temp test fixture.png",  
-        "description": "2", 
+        "description": "Automated test equipment for temperature probe calibration. Designed for tool-free installation, ergonomic access, and long life. Capable of withstanding temperatures greater than 120C.", 
         "link": ""
-    }, 
-    {
-        "name": "2-Piece Electronics Enclosure", 
-        "figure": "2023-07-06_gateway.png",  
-        "description": "1", 
-        "link": ""
-    } 
+    }
 ]
