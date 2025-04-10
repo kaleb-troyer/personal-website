@@ -8,7 +8,6 @@ def _ed_bar(value, max):
 def _xp_bar(value, max): 
     return 100 * (value / max)
 
-
 def _getter(name, folder='profile'):
 
     path = os.path.join(os.getcwd(), folder)
@@ -74,6 +73,12 @@ def getPortfolio():
 
 def getAbout(): 
     return _getter('about')
+
+def getLikes(): 
+    return _getter('likes')
+
+def getUses(): 
+    return _getter('uses')
 
 if __name__=='__main__': 
 

@@ -16,6 +16,10 @@
     padding: 0;
 }
 
+#profile figure {
+    border: 2px solid var(--fill-color-dark);
+}
+
 #profile img {
     display: block;
     min-width: 50px;  
@@ -54,7 +58,7 @@
     width: 100%;
     gap: 0 1rem;
     align-items: top; 
-    margin: 1rem 0 0;
+    margin: 1rem 0 1rem;
 }
 
 .education-item, .skill-item, .experience-item {

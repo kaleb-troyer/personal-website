@@ -73,16 +73,20 @@ def about(page=None):
     if not user: 
         return render_template('404.html'), 404
 
-    about = getinfo.getAbout()
-    ethos = about['ethos']
-    intro = about['intro']
-    interests = about['interests']
+    aboutme = getinfo.getAbout()
+    ethos = aboutme['ethos']
+    intro = aboutme['intro']
+    interests = aboutme['interests']
+    likes = getinfo.getLikes()
+    uses = getinfo.getUses()
 
     return render_template(
         'about.html', 
         interests=interests, 
         ethos=ethos, 
         intro=intro, 
+        likes=likes, 
+        uses=uses, 
         subpage=page
     )
 
@@ -144,17 +148,21 @@ def subpages_about(page):
     if page not in ["interests", "likes", "uses"]:
         return "Page not found", 404
 
-    about = getinfo.getAbout()
-    ethos = about['ethos']
-    intro = about['intro']
-    interests = about['interests']
+    aboutme = getinfo.getAbout()
+    ethos = aboutme['ethos']
+    intro = aboutme['intro']
+    interests = aboutme['interests']
+    likes = getinfo.getLikes()
+    uses = getinfo.getUses()
 
     if request.headers.get("X-Requested-With") == "XMLHttpRequest":
         return render_template(
             f"subpages/_{page}.html", 
             interests=interests, 
             ethos=ethos, 
-            intro=intro, 
+            intro=intro,
+            likes=likes, 
+            uses=uses, 
             subpage=page
         )
 

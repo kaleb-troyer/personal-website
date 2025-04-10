@@ -1,7 +1,7 @@
 
 :root {
-    --temp: #313A3F;
-    --main: #1A1917;  
+    --portfolio-font: var(--font-color-dark);
+    --portfolio-fill: var(--fill-color-lite);  
 }
 
 /* ------------------------------ */
@@ -10,24 +10,39 @@
 
 .secondary {
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 1rem;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 1rem; 
+    justify-content: center;
     padding: 1rem;
 }
 
 .secondary a {
     text-decoration: underline;
-    text-decoration-color: var(--font-color-main);
-    color: var(--font-color-main); 
+    text-decoration-color: var(--portfolio-font);
+    color: var(--portfolio-font); 
 }
 
 /* ------------------------------ */
 /* Mobile Formatting ------------ */
 /* ------------------------------ */ 
 
+#portfolio-item {
+    background-color: var(--portfolio-fill);
+    border-color: var(--portfolio-fill);
+    color: var(--portfolio-font);
+    border-radius: 12px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    padding: 1rem;
+    text-align: center;
+}
+
+#portfolio-item h3 {
+    border-bottom: var(--border-width) solid var(--portfolio-font);
+}
+
 #portfolio-item figure {
     margin: 0 auto; 
-    padding: 0;
+    padding: 0.2rem;
     display: block;
     width: fit-content; 
 }
@@ -39,15 +54,6 @@
     width: 100%;      
     height: auto;
     border-radius: 8px;
-}
-
-#portfolio-item {
-    background-color: var(--temp);
-    border-color: var(--temp);
-    border-radius: 12px;
-    box-shadow: 0 2px 20px rgba(0, 0, 0, 0.1);
-    padding: 1rem;
-    text-align: center;
 }
 
 #portfolio-item h3 {

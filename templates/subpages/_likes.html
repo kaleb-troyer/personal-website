@@ -1,38 +1,12 @@
 
-<p>things we cook, software I use, board games, books, etc.</p>
+<p>{{ likes.description }}</p>
 
-<h3>movies</h3>
-<ul>
-    <li>The Nice Guys</li>
-    <li>Bladerunner 2049</li>
-    <li>Princess Mononoke</li>
-    <li>Honor Among Thieves</li>
-    <li>The Two Towers</li>
-    <li>Chef</li>
-</ul>
+{% for category, items in likes.categories.items() %}
+  <h3>{{ category }}</h3>
+  <ul>
+    {% for item in items %}
+      <li>{{ item }}</li>
+    {% endfor %}
+  </ul>
+{% endfor %}
 
-<h3>board games</h3>
-<ul>
-    <li>Terraforming Mars</li>
-    <li>7 Wonders Duel</li>
-    <li>Scythe</li>
-    <li>Wyrmspan</li>
-</ul>
-
-<h3>books (fun)</h3>
-<ul>
-    <li>The Lies of Locke Lamora</li>
-    <li>The Way of Kings</li>
-    <li>The Name of the Wind</li>
-    <li>A Memory of Light</li>
-    <li>Warbreaker</li>
-</ul>
-
-<h3>books (serious)</h3>
-<ul>
-    <li>A Random Walk Down Wallstreet</li>
-    <li>Bogleheads Guide to Investing</li>
-    <li>The Masculine Mandate</li>
-    <li>The Meaning of Marriage</li>
-    <li>Differ We Must</li>
-</ul>

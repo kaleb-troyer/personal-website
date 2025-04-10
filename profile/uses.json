@@ -1,0 +1,31 @@
+
+{
+"description": "this is what I use",
+    "categories": {
+
+        "on my desk": [
+            "Mouse: Logitech MX Vertical",
+            "Keyboard: Keychron K2 Mechanical",
+            "Headphones: Apple Airpods Pro 2"
+        ],
+
+        "in my computer": [
+            "CPU: Intel i7 13th gen",
+            "GPU: Nvidia GeForce RTX 4090",
+            "RAM: 64GB DDR4",
+            "Fans: Noctua NF-A14x25 G2",
+            "Memory: 2TB Samsung M.2",
+            "Cooling: Cooler Master AIO 3x120mm",
+            "Case: Fractal North"
+        ],
+
+        "always running": [
+            "IDE: vscode + bash",
+            "OS: Windows + Linux Ubuntu",
+            "Notes: Obsidian.md",
+            "Browser: Firefox", 
+            "Audio: Audible + Youtube Music"
+        ]
+    }
+}
+  

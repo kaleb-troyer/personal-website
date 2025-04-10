@@ -1,0 +1,39 @@
+
+{
+    "description": "things we cook, software I use, board games, books, etc.",
+    "categories": {
+
+        "movies": [
+            "The Nice Guys",
+            "Bladerunner 2049",
+            "Princess Mononoke",
+            "Honor Among Thieves",
+            "The Two Towers",
+            "Chef"
+        ],
+
+        "board games": [
+            "Terraforming Mars",
+            "7 Wonders Duel",
+            "Scythe",
+            "Wyrmspan"
+        ],
+
+        "books (fun)": [
+            "The Lies of Locke Lamora",
+            "The Way of Kings",
+            "The Name of the Wind",
+            "A Memory of Light",
+            "Warbreaker"
+        ],
+
+        "books (serious)": [
+            "A Random Walk Down Wallstreet",
+            "Bogleheads Guide to Investing",
+            "The Masculine Mandate",
+            "The Meaning of Marriage",
+            "Differ We Must"
+        ]
+    }
+}
+  

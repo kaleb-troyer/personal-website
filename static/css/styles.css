@@ -2,8 +2,10 @@
 /* project variables */
 :root {
     --font-color-main:  #E8E6E3;
+    --font-color-dark:  #2C3032;
     --fill-color-main:  #3C4144; 
     --fill-color-dark:  #2C3032;
+    --fill-color-lite:  #E8E6E3;
     --accent-color:     #B9D299; 
     --font-heading: monospace; 
     --font-body: 'Segoe UI', Tahoma, Geneva, sans-serif; 
@@ -145,6 +147,8 @@ main > * {
     max-width: none; 
     background-color: var(--fill-color-main);
     color: var(--font-color-main);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    border-top: 4px solid var(--accent-color);
 }
 
 .primary {
@@ -155,6 +159,7 @@ main > * {
     display: block;
     width: 100%;      
     height: auto;
+    border: 2px solid var(--fill-color-dark);
 }
 
 /* ------------------------------ */
