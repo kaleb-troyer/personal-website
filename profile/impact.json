@@ -1,0 +1,33 @@
+
+{
+    "description": "Bringing a rare blend of expertise in thermal, mechanical, and computational engineering, I provide a versatile skill set to drive high-impact projects and solutions across diverse domains.",
+    "roles": [
+        {
+            "title": "Thermal Engineering",
+            "summary": "Heat management is a critical bottleneck in nearly every emerging technology. Having studied and applied special topics in conduction, convection, and radiation, I specialize in tackling these challenges so you can focus on innovating.", 
+            "key_benefits": [
+                "Expertise in efficient thermal management",
+                "Proven track record in system optimization",
+                "Ability to reduce operational costs"
+            ]
+        },
+        {
+            "title": "Mechanical Engineering",
+            "summary": "With hands-on experience developing resilient mechanical systems for demanding environments, I am capable of leading the design of critical hardware from concept to production, always balancing technical feasibility with cost-effectiveness.", 
+            "key_benefits": [
+                "Expertise in mechanical design and analysis",
+                "Strong background in FEA and mechanical reliability",
+                "Ability to ensure performance in real-world environments"
+            ]
+        },
+        {
+            "title": "Computational Engineering",
+            "summary": "Have a problem thats too complex, or does your optimization keep stalling? With my expertise in high-performance computing, I can transform your time-to-solve from months into a matter of days, while ensuring precision and reliability at every step.", 
+            "key_benefits": [
+                "Expertise in high-performance computing",
+                "Proven ability to optimize algorithms for speed",
+                "Experience with multi-threading and large-scale simulations"
+            ]
+        }
+    ]
+}

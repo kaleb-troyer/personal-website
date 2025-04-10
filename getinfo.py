@@ -80,6 +80,9 @@ def getLikes():
 def getUses(): 
     return _getter('uses')
 
+def getImpact(): 
+    return _getter('impact')
+
 if __name__=='__main__': 
 
     loaded_json = getAbout()['introduction']

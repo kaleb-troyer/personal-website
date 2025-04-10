@@ -2,10 +2,12 @@
 <p>{{ uses.description }}</p>
 
 {% for category, items in uses.categories.items() %}
-  <h3>{{ category }}</h3>
-  <ul>
+    <div class="minor-h">
+        <h3 class="heading">{{ category }}</h3>
+    </div>
+    <ul>
     {% for item in items %}
-      <li>{{ item }}</li>
+        <li>{{ item }}</li>
     {% endfor %}
-  </ul>
+    </ul>
 {% endfor %}

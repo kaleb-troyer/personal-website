@@ -9,7 +9,7 @@
             <span></span>
         </div>
         {% for lang in languages %}
-        <div class="skill-item">
+        <div class="skill-item hover">
             <span>{{ lang.name }}</span>
             <span class="xp-bar" style="width: {{ lang.education }}%"></span>
             <span class="hours">{{ lang.hours }}</span>
@@ -32,7 +32,7 @@
             <span></span>
         </div>
         {% for skill in skills %}
-        <div class="skill-item">
+        <div class="skill-item hover">
             <span>{{ skill.name }}</span>
             <span class="xp-bar" style="width: {{ skill.education }}%"></span>
             <span class="hours">{{ skill.hours }}</span>
@@ -55,7 +55,7 @@
             <span></span>
         </div>
         {% for program in software %}
-        <div class="skill-item">
+        <div class="skill-item hover">
             <span>{{ program.name }}</span>
             <span class="xp-bar" style="width: {{ program.education }}%"></span>
             <span class="hours">{{ program.hours }}</span>

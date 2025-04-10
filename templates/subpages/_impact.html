@@ -1,4 +1,20 @@
 
-<article id="education">
-    <p>impact content loaded</p>
+<article id="impact">
+    <p class="section-description">{{ impact.description }}</p>
+    {% for role in impact.roles %}
+    <article>
+        <div class="role-list minor-h">
+            <div class="role-item">
+                <h3 class="heading">{{ role.title }}</h3>
+            </div>
+        </div>
+        <p>{{ role.summary }}</p>
+        <!-- <ul>
+            {% for benefit in role.key_benefits %}
+            <li>{{ benefit }}</li>
+            {% endfor %}
+        </ul> -->
+    </article>
+    {% endfor %}
 </article>
+

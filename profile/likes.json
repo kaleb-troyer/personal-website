@@ -1,6 +1,7 @@
 
 {
-    "description": "things we cook, software I use, board games, books, etc.",
+    "description": "Take the following as a list of heartfelt recommendations. If nothing else, I recommend you read The Lies of Locke Lamora by Scott Lynch. Its an imperfect masterpiece, with nothing else like it that I have found.", 
+
     "categories": {
 
         "movies": [
@@ -11,14 +12,7 @@
             "The Two Towers",
             "Chef"
         ],
-
-        "board games": [
-            "Terraforming Mars",
-            "7 Wonders Duel",
-            "Scythe",
-            "Wyrmspan"
-        ],
-
+        
         "books (fun)": [
             "The Lies of Locke Lamora",
             "The Way of Kings",
@@ -33,6 +27,13 @@
             "The Masculine Mandate",
             "The Meaning of Marriage",
             "Differ We Must"
+        ], 
+
+        "board games": [
+            "Terraforming Mars",
+            "7 Wonders Duel",
+            "Scythe",
+            "Wyrmspan"
         ]
     }
 }

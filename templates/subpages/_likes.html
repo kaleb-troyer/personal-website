@@ -2,11 +2,13 @@
 <p>{{ likes.description }}</p>
 
 {% for category, items in likes.categories.items() %}
-  <h3>{{ category }}</h3>
-  <ul>
-    {% for item in items %}
-      <li>{{ item }}</li>
-    {% endfor %}
-  </ul>
+    <div class="minor-h">
+        <h3 class="heading">{{ category }}</h3>
+    </div>
+    <ul>
+        {% for item in items %}
+        <li>{{ item }}</li>
+        {% endfor %}
+    </ul>
 {% endfor %}
 

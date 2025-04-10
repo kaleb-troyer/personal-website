@@ -1,7 +1,8 @@
 
 <article id="experience">
-    <!-- <h2>Experience</h2> -->
-    {% for work in work_history %}
+    <p class="section-description emphasis">{{ experience.tldr }}</p>
+    <p class="section-description">{{ experience.description }}</p>
+    {% for work in experience.history %}
     <article>
         <div class="experience-list">
             <div class="experience-item">
@@ -18,3 +19,4 @@
     </article>
     {% endfor %}
 </article>
+

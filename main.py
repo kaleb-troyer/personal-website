@@ -3,6 +3,7 @@ from werkzeug.middleware.proxy_fix import ProxyFix
 from flask import Flask, render_template, request
 from model import PageVisit, Visitors, logUser
 from flask_sqlalchemy import SQLAlchemy
+from markdown import markdown as md
 
 import getinfo
 import os
@@ -32,6 +33,7 @@ def home(page=None):
     if not user:
         return render_template("404.html"), 404
 
+    impact = getinfo.getImpact()
     skills = getinfo.getSkills()
     software = getinfo.getSoftware()
     languages = getinfo.getLanguages()
@@ -42,11 +44,12 @@ def home(page=None):
     return render_template(
         "home.html",
         introduction=introduction,
+        impact=impact, 
         skills=skills,
         software=software,
         languages=languages, 
         education=education,
-        work_history=experience,
+        experience=experience,
         subpage=page, 
     )
 
@@ -121,6 +124,7 @@ def subpages_home(page):
     if page not in ["impact", "skills", "experience", "education"]:
         return "Page not found", 404
 
+    impact = getinfo.getImpact()
     skills = getinfo.getSkills()
     software = getinfo.getSoftware()
     languages = getinfo.getLanguages()
@@ -132,11 +136,12 @@ def subpages_home(page):
         return render_template(
             f"subpages/_{page}.html", 
             introduction=introduction,
+            impact=impact, 
             skills=skills,
             software=software,
             languages=languages, 
             education=education,
-            work_history=experience,
+            experience=experience,
             subpage=page, 
         )
 

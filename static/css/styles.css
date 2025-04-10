@@ -7,6 +7,7 @@
     --fill-color-dark:  #2C3032;
     --fill-color-lite:  #E8E6E3;
     --accent-color:     #B9D299; 
+    --emphasis:         #eec463; 
     --font-heading: monospace; 
     --font-body: 'Segoe UI', Tahoma, Geneva, sans-serif; 
     --border-width: 1.5px; 
@@ -40,7 +41,11 @@ h1, h2, h3, h4, h5 {
 }
 
 .active {
-    color: var(--accent-color) !important;
+    color: var(--emphasis) !important;
+}
+
+.emphasis {
+    color: var(--emphasis);
 }
 
 /* ------------------------------ */
@@ -160,6 +165,26 @@ main > * {
     width: 100%;      
     height: auto;
     border: 2px solid var(--fill-color-dark);
+    box-sizing: border-box; 
+}
+
+/* ------------------------------ */
+/* Minor Headings --------------- */
+/* ------------------------------ */ 
+
+.minor-h {
+    display: grid;
+    margin: 0;
+    padding: 0;
+    grid-template-columns: min(220px, 100%) 1fr;
+    width: 100%;
+}
+
+.minor-h h2, h3 {
+    padding: 0;
+    margin: 0;
+    padding-bottom: 0.2rem;
+    padding-top: 0.5rem;
 }
 
 /* ------------------------------ */
