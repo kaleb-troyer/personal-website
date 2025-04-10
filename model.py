@@ -19,6 +19,9 @@ class PageVisit(db.Model):
 
     def __repr__(self):
         return f"#{self.id} | visitor {self.visitor_id} @ {str(self.datetime)[:-7]} | {self.page_id} page"
+        
+    def to_dict(self): 
+        return {"visit": self.id, "visitor": self.visitor_id, "time": str(self.datetime)[:-7], "page": self.page_id}
 
 class Visitors(db.Model):
 
@@ -30,7 +33,10 @@ class Visitors(db.Model):
     pagevisits = db.relationship('PageVisit', backref = 'visitors', lazy = True)
 
     def __repr__(self):
-        return f"visitor {self.id} | {self.lasttime} | {self.location}"
+        return f"visitor {self.id} | {str(self.lasttime)[:-7]} | {self.location}"
+        
+    def to_dict(self): 
+        return {"visitor": self.id, "time": str(self.lasttime)[:-7], "location": self.location}
 
 def _validate_ip(ip): 
     pattern = r'^(\d{1,3}\.){3}\d{1,3}$'

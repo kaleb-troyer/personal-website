@@ -1,4 +1,4 @@
-<!-- portfolio.html -->
+<!-- analytics.html -->
 {% extends 'base.html' %}
 
 {% block content %}
@@ -7,22 +7,64 @@
 <link rel="stylesheet" href="{{ url_for('static', filename='css/analytics.css') }}">
 {% endblock %}
 
-<section id="analysis">
+<section class="primary">
     <ul>
-    {% for key, value in analysis.items() %}
-        <li>{{ key }}: {{ value }}</li>
-    {% endfor %}
-        <li></li>
-        <li>Visitors:</li>
-    {% for row in lastXVisitors %}
-        <li>{{ row }}</li>
-    {% endfor %}
-        <li></li>
-        <li>Page Visits:</li>
-    {% for row in lastXVisits %}
-        <li>{{ row }}</li>
-    {% endfor %}
+        {% for key, value in analysis.items() %}
+            <li>{{ key }}: {{ value }}</li>
+        {% endfor %}
     </ul>
+</section>
+
+<section class="secondary">
+    <section id="analysis">
+
+        <h3>Visitors</h3>
+        <table class="table-visitors" border="1">
+            <thead>
+                <tr>
+                    <th>Visitor ID</th>
+                    <th>Timestamp</th>
+                    <th>Location</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for visitor in lastXVisitors %}
+                    {% set visitor_dict = visitor.to_dict() %}
+                    <tr>
+                        <td>{{ visitor_dict['visitor'] }}</td>
+                        <td>{{ visitor_dict['time'] }}</td> 
+                        <td>{{ visitor_dict['location'] if visitor_dict['location'] else 'Not Available' }}</td> 
+                    </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+        
+        <br>
+        
+        <h3>Page Visits</h3>
+        <table class="table-visits" border="1">
+            <thead>
+                <tr>
+                    <th>Visit ID</th>
+                    <th>Visitor ID</th>
+                    <th>Timestamp</th>
+                    <th>Page</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for visit in lastXVisits %}
+                    {% set visit_dict = visit.to_dict() %}
+                    <tr>
+                        <td>{{ visit_dict['visit'] }}</td>
+                        <td>{{ visit_dict['visitor'] }}</td>
+                        <td>{{ visit_dict['time'] if visit_dict['time'] else 'N/A' }}</td>
+                        <td>{{ visit_dict['page'] }}</td>
+                    </tr>
+                {% endfor %}
+            </tbody>
+        </table> 
+
+    </section>
 </section>
 
 {% endblock %}

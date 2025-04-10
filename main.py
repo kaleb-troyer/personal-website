@@ -6,7 +6,11 @@ from flask_sqlalchemy import SQLAlchemy
 from markdown import markdown as md
 
 import getinfo
+import dotenv
 import os
+
+# loading environment variables
+dotenv.load_dotenv()
 
 # instantiating database
 db = SQLAlchemy()
@@ -133,6 +137,11 @@ def subpages_home(page):
     introduction = getinfo.getAbout()["home page"]
 
     if request.headers.get("X-Requested-With") == "XMLHttpRequest":
+        
+        user = logUser(db, f'home/{page}')
+        if not user: 
+            return render_template('404.html'), 404
+
         return render_template(
             f"subpages/_{page}.html", 
             introduction=introduction,
@@ -161,6 +170,11 @@ def subpages_about(page):
     uses = getinfo.getUses()
 
     if request.headers.get("X-Requested-With") == "XMLHttpRequest":
+        
+        user = logUser(db, f'about/{page}')
+        if not user: 
+            return render_template('404.html'), 404
+        
         return render_template(
             f"subpages/_{page}.html", 
             interests=interests, 
@@ -176,6 +190,3 @@ def subpages_about(page):
 
 if __name__=='__main__': 
     app.run(host="0.0.0.0", debug=True)
-
-
-
