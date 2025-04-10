@@ -3,7 +3,6 @@ from werkzeug.middleware.proxy_fix import ProxyFix
 from flask import Flask, render_template, request
 from model import PageVisit, Visitors, logUser
 from flask_sqlalchemy import SQLAlchemy
-from markdown import markdown as md
 
 import getinfo
 import dotenv
@@ -20,7 +19,7 @@ app = Flask(__name__)
 
 # webapp configuration
 app.config['SECRET_KEY'] = os.getenv('SECRET_KEY')
-app.config['SQLALCHEMY_DATABASE_URI'] = f'sqlite:///{os.path.join(os.path.dirname(__file__), 'database.db')}'
+app.config['SQLALCHEMY_DATABASE_URI'] = f'sqlite:///{os.path.join(os.path.dirname(__file__), "database.db")}'
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
 app.wsgi_app = ProxyFix(app.wsgi_app, x_host=1)
 

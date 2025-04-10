@@ -12,7 +12,7 @@ def _getter(name, folder='profile'):
 
     path = os.path.join(os.getcwd(), folder)
     file = f'{name}.json'
-    with open(os.path.join(path, file), 'r', encoding='utf-8') as file: 
+    with open(os.path.join(os.path.dirname(__file__), 'profile', file), 'r', encoding='utf-8') as file: 
         data = json.load(file)
 
     return data
